@@ -1,10 +1,10 @@
-# basic_git
+# Basic git
 Some basic git instrusctions refered from the odin project.
 These are some basic instructions copied as it is from The Odin Project for setting up git locally.
 (for arch-linux based systems)
 ## Step 1: Install Git
 ### 1.1 Install Git
-if git isnt installed already (chances are rare) do
+If `git` isnt installed already (chances are rare) do
 ```
 sudo pacman -S git
 ```
@@ -23,12 +23,12 @@ If you opted to use the private GitHub email address, the second command will lo
 ```
 git config --global user.email "123456789+odin@users.noreply.github.com" # Remember to use your own private GitHub email here.
 ```
-GitHub recently changed the default branch on new repositories from master to main. Change the default branch for Git using this command:
+GitHub recently changed the default branch on new repositories from `master` to `main`. Change the default branch for Git using this command:
 
 ```
 git config --global init.defaultBranch main
 ```
-To enable colorful output with git, type
+To enable colorful output with `git`, type
 
 ```
 git config --global color.ui auto
@@ -62,18 +62,18 @@ ssh-keygen -t ed25519 -C "your@email.com"
 
 Now, you need to tell GitHub what your SSH key is so that you can push your code without typing in a password every time.
 
-First, you’ll navigate to where GitHub receives our SSH key. Log into GitHub and click on your profile picture in the top right corner. Then, click on Settings in the drop-down menu.
+First, you’ll navigate to where GitHub receives our SSH key. Log into GitHub and click on your profile picture in the top right corner. Then, click on `Settings` in the drop-down menu.
 
-Next, on the left-hand side, click SSH and GPG keys. Then, click the green button in the top right corner that says New SSH Key. Name your key something that is descriptive enough for you to remember where it came from. Leave this window open while you do the next steps.
+Next, on the left-hand side, click `SSH and GPG keys`. Then, click the green button in the top right corner that says `New SSH Key`. Name your key something that is descriptive enough for you to remember where it came from. Leave this window open while you do the next steps.
 
-Now you need to copy your public SSH key. To do this, we’re going to use a command called cat to read the file to the console. (Note that the .pub file extension is important in this case.)
+Now you need to copy your public SSH key. To do this, we’re going to use a command called `cat` to read the file to the console. (Note that the `.pub` file extension is important in this case.)
 
 ```
 cat ~/.ssh/id_ed25519.pub
 ```
 Highlight and copy the output, which starts with ssh-ed25519 and ends with your email address.
 
-Now, go back to GitHub in your browser window and paste the key you copied into the key field. Keep the key type as `Authentication Key` and then, click Add SSH key. You’re done! You’ve successfully added your SSH key!
+Now, go back to GitHub in your browser window and paste the key you copied into the key field. Keep the key type as `Authentication Key` and then, click `Add SSH key`. You’re done! You’ve successfully added your SSH key!
 
 
 
